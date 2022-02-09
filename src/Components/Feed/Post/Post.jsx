@@ -48,8 +48,9 @@ const Post = props => {
 
 	function removeCurrentUser(array, setState) {
 		const i = array.indexOf(currentUser);
-		array.splice(i, 1);
-		setState(array);
+		const newState = [...array];
+		newState.splice(i, 1);
+		setState(newState);
 	}
 
 	return (
