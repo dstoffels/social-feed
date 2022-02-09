@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import AllPosts from './AllPosts/AllPosts.jsx';
 import CreatePost from './CreatePost/CreatePost.jsx';
 import './Feed.css';
 import Post from './Post/Post.jsx';
@@ -11,7 +10,9 @@ const Feed = props => {
 
 	const allPosts = posts.map((post, i) => {
 		const { username, content, date } = post;
-		return <Post key={i} username={username} content={content} date={date} />;
+		return (
+			<Post key={i} currentUser={currentUser} username={username} content={content} date={date} />
+		);
 	});
 
 	function addPost(content) {

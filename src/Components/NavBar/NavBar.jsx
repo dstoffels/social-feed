@@ -1,4 +1,4 @@
-import { FeedIcon, LogoutIcon } from './icons.jsx';
+import { FeedIcon, LogoutIcon } from '../Bootstrap/icons.jsx';
 import './NavBar.css';
 
 const NavBar = props => {

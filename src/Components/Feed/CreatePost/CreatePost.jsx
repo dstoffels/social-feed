@@ -14,9 +14,10 @@ const CreatePost = props => {
 	function handleSubmit(e) {
 		e.preventDefault();
 		addPost(content);
+		setContent('');
 	}
 	return (
-		<div className='border-bottom p-2'>
+		<div className='border-bottom border-secondary p-2'>
 			<form onSubmit={handleSubmit}>
 				<input
 					className='new-post-content mb-2'
