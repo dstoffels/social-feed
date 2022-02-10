@@ -8,10 +8,14 @@ import {
 import './Post.css';
 
 const Post = props => {
-	const { currentUser, username, content, date = 'date' } = props;
+	const { id, currentUser, username, content, date = 'date', likes, dislikes, updatePost } = props;
 
-	const [likedBy, setLikedBy] = useState([]);
-	const [dislikedBy, setDislikedBy] = useState([]);
+	const [likedBy, setLikedBy] = useState(likes);
+	const [dislikedBy, setDislikedBy] = useState(dislikes);
+
+	useEffect(() => {
+		updatePost({ id, username, content, date, likedBy, dislikedBy });
+	});
 
 	const likeBtn = () => {
 		if (!likedBy.includes(currentUser)) {
@@ -54,19 +58,19 @@ const Post = props => {
 	}
 
 	return (
-		<div className='overflow-auto p-2'>
+		<div className='overflow-auto p-2 border-bottom border-secondary'>
 			<strong>{username}</strong>
 			<span className='float-end'>{date}</span>
 			<p>{content}</p>
 			<div className='float-end mb-2'>
 				<a href='' onClick={handleLike}>
 					{likeBtn()}
-					{likedBy.length ? likedBy.length : ''}
 				</a>
+				{likedBy.length ? likedBy.length : ''}
 				<a href='' onClick={handleDislike}>
 					{dislikeBtn()}
-					{dislikedBy.length ? dislikedBy.length : ''}
 				</a>
+				{dislikedBy.length ? dislikedBy.length : ''}
 			</div>
 		</div>
 	);

@@ -2,13 +2,14 @@ import { FeedIcon, LogoutIcon } from '../Bootstrap/icons.jsx';
 import './NavBar.css';
 
 const NavBar = props => {
+	const { currentUser, setCurrentUser } = props;
 	function handleLogOut(e) {
 		e.preventDefault();
-		props.setCurrentUser('');
+		setCurrentUser('');
 	}
 	return (
 		<div className=' position-fixed mw-100'>
-			<h4 className='sidebar-title'>Gripe</h4>
+			<h5 className='sidebar-title'>{currentUser}</h5>
 			<div className='nav-item'>
 				<a>
 					<FeedIcon />
@@ -21,10 +22,6 @@ const NavBar = props => {
 					Log Out
 				</a>
 			</div>
-			<p className='text-muted'>notifications?</p>
-			<p className='text-muted'>messages?</p>
-			<p className='text-muted'>settings?</p>
-			<p className='text-muted'>light/darkmode toggle</p>
 		</div>
 	);
 };

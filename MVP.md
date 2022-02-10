@@ -4,7 +4,7 @@
 
 <!-- (5 points) As a developer, I want to display all posts (name, body, and liked status) within a feed on the main page. -->
 
-(10 points) As a developer, I want to create like and dislike buttons that will visually show and toggle between liked or disliked on a post.
+<!-- (10 points) As a developer, I want to create like and dislike buttons that will visually show and toggle between liked or disliked on a post. -->
 
 <!-- (10 points) As a developer, I want to create a form on a separate component that allows me to add a new post to the main feed. -->
 
@@ -12,8 +12,8 @@
 
 <!-- (5 points) As a developer, I want to have an aesthetically pleasing user interface to ensure a great user experience. -->
 
-BONUS:
+<!-- BONUS: -->
 
 <!-- (5 points) As a developer, I want to add a date to all posts and post creations. -->
 
-(5 points) As a developer, I want the post form to reset the inputs empty after a post creation.
+<!-- (5 points) As a developer, I want the post form to reset the inputs empty after a post creation. -->
