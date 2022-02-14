@@ -7,9 +7,16 @@ import {
 } from '../../Bootstrap/icons.jsx';
 import './Post.css';
 
-const Post = props => {
-	const { id, currentUser, username, content, date = 'date', likes, dislikes, updatePost } = props;
-
+const Post = ({
+	id,
+	currentUser,
+	username,
+	content,
+	date = 'date',
+	likes,
+	dislikes,
+	updatePost,
+}) => {
 	const [likedBy, setLikedBy] = useState(likes);
 	const [dislikedBy, setDislikedBy] = useState(dislikes);
 
